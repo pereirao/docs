@@ -25,7 +25,7 @@ privados ou protegidos não podem ser acessados pelo roteamento.
 Considerações de URL para nomes de Controller
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Como você acabou de ver, controllers singulares mapeiam facilmente um
+Como você acabou de ver, controllers com uma palavra mapeiam facilmente um
 caminho simples, todo em minúsculo. Por exemplo, ``ApplesController`` (o qual
 deveria ser definido no arquivo de nome 'ApplesController.php') é acessado
 por http://example.com/apples.
@@ -39,9 +39,9 @@ igual ao nome do controller, então:
 *  /red\_apples
 
 Todos resolverão para o index do controller RedApples. Porém,
-a forma correta é que suas URLs sejam minúsculas e separadas por sublinhado,
-portanto /red\_apples/go\_pick é a forma correta de acessar a action
-``RedApplesController::go_pick``.
+a forma correta é que suas URLs sejam minúsculas e separadas por hífen,
+usando a classe ``DashedRoute``, portanto /red-apples/go-pick é a forma
+correta de acessar a action ``RedApplesController::goPick()``.
 
 Para mais informações sobre o manuseio de URLs e parâmetros do CakePHP,
 veja :ref:`routes-configuration`.
